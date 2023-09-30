@@ -22,7 +22,7 @@ class AuthController extends Controller
             $token = Str::random(60);
 
             // Save the token to the user's api_token field
-            $user->api_token = $token;
+            $user->api_token = $user->password;
             $user->save();
             $user->abilities = [
                 'action'  => "manage",

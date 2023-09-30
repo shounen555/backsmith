@@ -16,11 +16,20 @@ class UsersSeeder extends Seeder
     {
         // Seed the 'users' table with sample data
         DB::table('users')->insert([
-            'name'              => 'jaber nouaman',
-            'email'             => 'admin@gmail.com',
+            'name'              => 'samira',
+            'email'             => 'samira@gmail.com',
             'email_verified_at' => now(),
-            'password'          => Hash::make('password'),
-            'role'              => 'admin',
+            'password'          => Hash::make('smith123finance'),
+            'role'              => 'finance',
+        ]);
+
+        // Seed the 'users' table with sample data
+        DB::table('users')->insert([
+            'name'              => 'majida',
+            'email'             => 'majida@gmail.com',
+            'email_verified_at' => now(),
+            'password'          => Hash::make('smith123gestion'),
+            'role'              => 'gestion',
         ]);
     }
 }
